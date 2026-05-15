@@ -1,31 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning APT Repo</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+        .propeller-text {
+            /* Targeting Papyrus with fallbacks just in case */
+            font-family: 'Papyrus', 'Fantasy', 'Copperplate', cursive;
+            font-size: 5rem;
+            font-weight: bold;
+            color: #333;
+            user-select: none;
+            
+            /* The Animation */
+            animation: spin 0.2s linear infinite;
+        }
 
-html, body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    font-family: 'Parisienne', cursive;
-    font-size: 72px;
-    color: white;
-}
-</style>
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <h1>APT Repo</h1>
+
+    <div class="propeller-text">APT Repo</div>
+
 </body>
 </html>
